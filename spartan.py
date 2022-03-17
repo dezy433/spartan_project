@@ -47,3 +47,84 @@ class spartan:
         self.sparta_course= sparta_course
     def set_sparta_stream(self,sparta_stream):
         self.sparta_stream = sparta_stream
+
+def read_first_name():
+    while True:
+        first_name = input("Please enter the trainee first name")
+        first_name = first_name.strip()
+        if len(first_name) >= 2:
+            return first_name
+        else:
+            print("Error, Trainee name has to be at least 2 characters")
+
+def read_last_name():
+    while True:
+        last_name = input("Please enter the trainee first name")
+        last_name = last_name.strip()
+        if len(last_name) >= 2:
+            return last_name
+        else:
+            print("Error,Trainee last name has to be at least 2 characters")
+
+def read_year():
+    while True:
+        year_str = input("Please enter the Trainee Birth Year:")
+        year_str = year_str.strip()
+
+        if year_str.isdigit():
+            year = int(year_str)
+            if (year >= 1900) and (year <= 2004):
+                return year
+            else:
+                print("Error, The Trainee Birth Year should be between 1900 and 2004")
+
+
+
+def read_month():
+    while True:
+        month_str = input("Please Enter the Trainee Birth Month:")
+        month_str = month_str.strip()
+
+        if month_str.isdigit():
+            month = int(month_str)
+            if (month >= 1) and (month <= 12):
+                return month
+            else:
+                print("Error, The Trainee Birth Month should be between 1 and 12")
+        else:
+            print("Error, The Trainee Birth Month should be a number")
+
+
+def read_day():
+    while True:
+        day_str = input("Please Enter the Trainee Birth Day:")
+        day_str = day_str.strip()
+
+        if day_str.isdigit():
+            day = int(day_str)
+            if (day >= 1) and (day <= 31):
+                return day
+            else:
+                print("Error, The Trainee Birth Day should be between 1 and 31")
+        else:
+            print("Error, The Trainee Birth Day should be a number")
+
+def read_course():
+    while True:
+        course = input("Please Enter The Trainee Course:")
+        course = course.strip()
+
+        if len(course) >= 1:
+            return course
+        else:
+            print("Error, The Trainee Course should be at least 1 Characters")
+
+def read_stream():
+    while True:
+        stream = input("Please Enter The Trainee Stream:")
+        stream = stream.strip()
+
+        if len(stream) >= 1:
+            return stream
+        else:
+            print("Error, The Trainee stream should be at least 1 Characters")
